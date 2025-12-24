@@ -21,7 +21,7 @@ This repository documents not only the intended design, but also the **troublesh
 ## Components Used
 - Arduino Uno (Clone)
 - Ultrasonic Sensor (HC-SR04)
-- Motor Driver Module (L298N / L293D)
+- Motor Driver Module (L298N)
 - DC Motors with Robot Chassis
 - External Battery Supply
 - Jumper Wires
