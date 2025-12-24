@@ -1,0 +1,101 @@
+# Troubleshooting & Debugging Log
+
+This document records the debugging process followed during the development of the obstacle avoiding robot car.  
+The goal is to systematically identify hardware and software issues and document observations and findings.
+
+---
+
+## Issue 1: Motors do not rotate
+
+### Observation
+- Robot does not move at all.
+- Motors do not rotate even when movement commands are executed.
+- Arduino and motor driver power LEDs are ON.
+
+### Actions Taken
+- Verified all wiring connections according to the circuit diagram.
+- Ensured common ground between Arduino and motor driver.
+- Checked motor driver power supply using external battery.
+
+### Result
+- No motor movement observed.
+
+### Possible Causes
+- Motor driver enable pins not correctly configured
+- Incorrect Arduino pin mapping
+- Insufficient current from power supply
+- Faulty motor driver module
+
+---
+
+## Issue 2: Motor functionality verification
+
+### Observation
+- Unsure whether motors or motor driver are faulty.
+
+### Actions Taken
+- Motors tested independently using direct battery connection.
+- Each motor rotated correctly when connected directly.
+
+### Result
+- Motors confirmed to be functional.
+
+### Conclusion
+- Issue likely lies in motor driver configuration or control logic.
+
+---
+
+## Issue 3: Motor driver control testing
+
+### Observation
+- Motors still not rotating when controlled through Arduino.
+
+### Actions Taken
+- Tested motor driver using a minimal Arduino motor test code.
+- Verified enable pins (ENA/ENB) and control pin logic levels.
+- Rechecked jumper settings on motor driver module.
+
+### Result
+- Motors did not rotate during test.
+
+### Possible Causes
+- Enable pins not receiving correct HIGH/PWM signal
+- Incorrect control pin connections
+- Motor driver internal fault
+
+---
+
+## Issue 4: Power supply concerns
+
+### Observation
+- Motors require higher current than Arduino can supply.
+
+### Actions Taken
+- Powered motors using external battery source.
+- Confirmed Arduino GND connected to motor driver GND.
+
+### Result
+- No change in motor behavior.
+
+### Conclusion
+- Power supply likely not the primary issue.
+
+---
+
+## Current Status
+- Motors and chassis are functional.
+- Arduino board powers on correctly.
+- Motor driver functionality remains uncertain.
+
+---
+
+## Next Debugging Steps
+- Replace motor driver module for verification
+- Test motor driver using alternate Arduino pins
+- Use multimeter to check enable pin voltage
+- Add serial debugging for pin state confirmation
+
+---
+
+## Notes
+This troubleshooting process reflects an iterative debugging approach commonly followed in embedded systems and robotics projects.
