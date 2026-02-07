@@ -54,5 +54,9 @@ This repository documents not only the intended design, but also the **troublesh
 
 Detailed debugging notes are available in `TROUBLESHOOTING.md`.
 
+
+
+Project Status: Functional and under optimization (≈85–90% complete)
+
 ---
 
